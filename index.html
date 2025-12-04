@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Bestie ❤️</title>
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        :root {
+            --paper-color: #ffffff;
+            --accent-color: #e44cbe; /* Violet/Purple */
+            --text-color: #b21d60;
+        }
+
+        body {
+            background-color: #625c4264; /* Light Violet background */
+            font-family: 'Kalam', cursive;
+            overflow-x: hidden;
+            color: var(--text-color);
+        }
+
+        /* Fixed Background Pattern */
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Floral pattern tinted PURPLE */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%237c3aed' fill-opacity='0.15'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4zm-14 0h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4zm-14 0h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4zm-14 0h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4zm-14 0h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4zm-14 0h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4zm-14 0h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4zm-14 0h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4zM6 5h4v1H6v4H5V6H1V5h4V1h1v4zm14 0h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4zm14 0h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4zm14 0h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4zm14 0h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4zm14 0h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4zm14 0h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4zm14 0h4v1h-4v4h-1v-4h-4v-1h4v-4h1v4z'/%3E%3Cpath d='M31.5 63.5c0-3-1.3-4-4-4h-1v-1c0-2.7-1-4-4-4s-4 1.3-4 4v1h-1c-2.7 0-4 1-4 4s1.3 4 4 4h1v1c0 2.7 1 4 4 4s4-1.3 4-4v-1h1c2.7 0 4-1 4-4zM13.5 24.5c0-3-1.3-4-4-4h-1v-1c0-2.7-1-4-4-4s-4 1.3-4 4v1h-1c-2.7 0-4 1-4 4s1.3 4 4 4h1v1c0 2.7 1 4 4 4s4-1.3 4-4v-1h1c2.7 0 4-1 4-4zM85.5 41.5c0-3-1.3-4-4-4h-1v-1c0-2.7-1-4-4-4s-4 1.3-4 4v1h-1c-2.7 0-4 1-4 4s1.3 4 4 4h1v1c0 2.7 1 4 4 4s4-1.3 4-4v-1h1c2.7 0 4-1 4-4zM62.5 76.5c0-3-1.3-4-4-4h-1v-1c0-2.7-1-4-4-4s-4 1.3-4 4v1h-1c-2.7 0-4 1-4 4s1.3 4 4 4h1v1c0 2.7 1 4 4 4s4-1.3 4-4v-1h1c2.7 0 4-1 4-4zM52.5 12.5c0-3-1.3-4-4-4h-1v-1c0-2.7-1-4-4-4s-4 1.3-4 4v1h-1c-2.7 0-4 1-4 4s1.3 4 4 4h1v1c0 2.7 1 4 4 4s4-1.3 4-4v-1h1c2.7 0 4-1 4-4zM73.5 25.5c0-3-1.3-4-4-4h-1v-1c0-2.7-1-4-4-4s-4 1.3-4 4v1h-1c-2.7 0-4 1-4 4s1.3 4 4 4h1v1c0 2.7 1 4 4 4s4-1.3 4-4v-1h1c2.7 0 4-1 4-4zM91.5 87.5c0-3-1.3-4-4-4h-1v-1c0-2.7-1-4-4-4s-4 1.3-4 4v1h-1c-2.7 0-4 1-4 4s1.3 4 4 4h1v1c0 2.7 1 4 4 4s4-1.3 4-4v-1h1c2.7 0 4-1 4-4zM20.5 82.5c0-3-1.3-4-4-4h-1v-1c0-2.7-1-4-4-4s-4 1.3-4 4v1h-1c-2.7 0-4 1-4 4s1.3 4 4 4h1v1c0 2.7 1 4 4 4s4-1.3 4-4v-1h1c2.7 0 4-1 4-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: -1;
+        }
+
+        /* Card/Paper Style */
+        .memory-card {
+            background-color: var(--paper-color);
+            background-image: linear-gradient(#537c78 1px, transparent 1px);
+            background-size: 100% 32px;
+            line-height: 32px;
+            max-width: 90%; /* Phone friendly width */
+            width: 400px;
+            margin: 40px auto;
+            padding: 40px 30px; /* Increased padding */
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15); /* Purple shadow */
+            position: relative;
+            /* Animation Setup */
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+            border-top: 1px solid #fff;
+        }
+
+        /* Tape Effect on Top */
+        .memory-card::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-right: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            backdrop-filter: blur(2px);
+        }
+
+        .memory-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Fonts */
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: var(--accent-color);
+        }
+        h2 {
+            font-family: 'Patrick Hand', cursive;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            font-size: 2.5rem; /* Bigger headers */
+        }
+        p {
+            font-size: 1.4rem; /* Bigger text */
+            line-height: 1.8;
+            color: #5b21b6;
+        }
+
+        .sticker {
+            position: absolute;
+            font-size: 3.5rem;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            animation: bounce 3s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .scroll-indicator {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--accent-color);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            z-index: 50;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="pb-20">
+
+    <div class="bg-pattern"></div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scroll-arrow">⬇️</div>
+
+    <div class="container mx-auto px-4 pt-10">
+        
+        <!-- CARD 1: COVER -->
+        <div class="memory-card visible text-center border-4 border-violet-500 bg-violet-50" style="background-image: none;">
+            <div class="text-7xl mb-4">💜</div>
+            <h1 class="text-6xl mb-2">Best Friends <br>Diary</h1>
+            <p class="text-violet-600 font-bold mt-4">Scroll Down 👇</p>
+            <p class="text-sm text-gray-400 mt-2">Top Secret Stuff</p>
+        </div>
+
+        <!-- CARD 2: PHOTO REMOVED -->
+        <div class="memory-card text-center">
+            <div class="sticker" style="top: -20px; right: -10px;">✨</div>
+            <div class="text-6xl mb-4">👑</div>
+            <h2 class="text-4xl mt-4">Oye Nautanki!</h2>
+            <p>
+                Waise toh tu sar ka dard hai, par sach kahun toh meri favourite medicine bhi tu hi hai.
+                <br>
+                <span class="text-base text-gray-400 mt-2 block">(Teri shakal ki zarurat nahi, tu waise hi cartoon hai)</span>
+            </p>
+        </div>
+
+        <!-- CARD 3: ROAST -->
+        <div class="memory-card text-center">
+            <div class="sticker" style="bottom: -20px; left: -10px; font-size: 4rem;">🐒</div>
+            <h2 class="text-4xl">Sach Sunn...</h2>
+            <p class="mt-4">
+                Log kehte hain dimaag use karna chahiye, par tu toh dil se sochti hai (kyunki dimaag hai hi nahi). <br><br>
+                Tu shakal se puri <b>Bandriya</b> lagti hai.
+            </p>
+            <p class="mt-4 text-violet-600 text-base font-bold">...Par meri Bandriya sabse cute hai.</p>
+        </div>
+
+        <!-- CARD 4: PHOTO REMOVED -->
+        <div class="memory-card text-center">
+            <div class="sticker" style="top: -10px; left: -15px;">👯‍♀️</div>
+            <div class="text-6xl mb-4">🔥</div>
+            <h2 class="text-4xl mt-4">Bas Tu Hi Hai</h2>
+            <p>
+                Jab saari duniya mere khilaaf hoti hai, tab bas tu hi mere saath khadi hoti hai. <br>
+                Tere bina ye life bilkul black & white hai yaar.
+            </p>
+        </div>
+
+        <!-- CARD 5: SECRETS -->
+        <div class="memory-card text-center">
+            <h2 class="text-4xl">Mere Raazdaar 🤐</h2>
+            <p class="mt-4">
+                Tu wo safe hai jahan mere saare raaz band hain. <br>
+                Mere rone par mujhe chup karana aur mere gande jokes pe hasna... 
+            </p>
+            <p class="font-bold text-violet-600 mt-4 text-xl">Agar police pakdegi toh hum dono saath jayenge!</p>
+        </div>
+
+        <!-- CARD 6: CONTRACT -->
+        <div class="memory-card text-center bg-violet-50">
+            <div class="sticker" style="top: -20px; right: 10px; font-size: 3rem;">⚠️</div>
+            <h2 class="text-4xl">No Refund!</h2>
+            <p class="mt-4">
+                Sunn, hum chahe kitna bhi ladein, tu mujhse peecha nahi chuda sakti.
+            </p>
+            <div class="border-2 border-dashed border-violet-400 p-4 mt-6 inline-block transform -rotate-2 bg-white">
+                <p class="font-bold text-gray-500 uppercase text-sm">Contract Status</p>
+                <p class="text-2xl text-violet-600 font-bold tracking-widest">LIFETIME</p>
+            </div>
+        </div>
+
+        <!-- CARD 7: PROMISE -->
+        <div class="memory-card text-center">
+            <h2 class="text-5xl text-violet-600">Promise 🤞</h2>
+            <p class="mt-4">
+                Main hamesha tera saath dunga. Chahe boyfriend/girlfriend aaye ya jaaye, ye Dosti permanent hai.
+            </p>
+            <p class="mt-6 text-2xl font-bold text-violet-700">
+                Tu meri Priority #1 hai aur rahegi.
+            </p>
+        </div>
+
+        <!-- CARD 8: END -->
+        <div class="memory-card text-center" style="margin-bottom: 100px;">
+            <div class="sticker" style="bottom: 80px; left: 50%; transform: translateX(-50%); z-index: -1; opacity: 0.1; font-size: 10rem;">💖</div>
+            <h1 class="text-7xl text-violet-600 mt-4">Love You!</h1>
+            <p class="mt-4 text-2xl">
+                Hamesha aise hi hasti rehna. <br>
+                Teri dosti meri sabse badi khushi hai.
+            </p>
+            <button onclick="celebrate()" class="mt-8 bg-violet-600 text-white px-10 py-4 rounded-full text-xl shadow-lg hover:bg-violet-700 transition transform hover:scale-105 active:scale-95 border-b-4 border-violet-800">
+                Press for Magic ✨
+            </button>
+            <p class="text-xs text-gray-400 mt-8">Made with ❤️ for my Bestie</p>
+        </div>
+
+    </div>
+
+    <script>
+        // Scroll Animation Logic
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Hide scroll arrow when we reach the bottom
+                    if(entry.target.innerHTML.includes('Love You')) {
+                        document.getElementById('scroll-arrow').style.display = 'none';
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.memory-card').forEach((card) => {
+            observer.observe(card);
+        });
+
+        // Confetti Function
+        function celebrate() {
+            var duration = 3 * 1000;
+            var animationEnd = Date.now() + duration;
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
+
+            var interval = setInterval(function() {
+                var timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                var particleCount = 50 * (timeLeft / duration);
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: 0.2, y: 0.6 } }));
+                confetti(Object.assign({}, defaults, { particleCount, origin: { x: 0.8, y: 0.6 } }));
+            }, 250);
+        }
+    </script>
+</body>
+</html>
